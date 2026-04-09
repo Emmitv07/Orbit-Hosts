@@ -15,7 +15,8 @@ defmodule OrbitHosts.Application do
       # Start a worker by calling: OrbitHosts.Worker.start_link(arg)
       # {OrbitHosts.Worker, arg},
       # Start to serve requests, typically the last entry
-      OrbitHostsWeb.Endpoint
+      OrbitHostsWeb.Endpoint,
+      {AshAuthentication.Supervisor, [otp_app: :orbit_hosts]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

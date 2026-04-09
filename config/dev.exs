@@ -1,4 +1,5 @@
 import Config
+config :ash, policies: [show_policy_breakdowns?: true]
 
 # Configure your database
 config :orbit_hosts, OrbitHosts.Repo,
@@ -68,7 +69,7 @@ config :orbit_hosts, OrbitHostsWeb.Endpoint,
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :orbit_hosts, dev_routes: true
+config :orbit_hosts, dev_routes: true, token_signing_secret: "ygXzZcPjIAjKYn9j9blK5xsZc8o03BGC"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :default_formatter, format: "[$level] $message\n"
